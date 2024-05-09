@@ -2,24 +2,28 @@
 const searchInput = document.getElementById('userInput');
 const searchButton = document.getElementById('searchButton');
 const recipeList = document.getElementById('userOutput');
+const searchForm = document.getElementById('form');
 
 
 searchButton.addEventListener('click', searchRecipes);
+searchForm.addEventListener('submit', (e) =>{
+   e.preventDefault();
+})
 
 const recipes = [
     {
         title: 'Pasta Carbonara',
         image: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-square640-v2.jpg',
-        ingredients: 'Spaghetti, eggs, bacon, Parmesan cheese, black pepper',
+        ingredients: ["Spaghetti", "eggs", "bacon", "Parmesan cheese", "black pepper"],
         link: 'https://www.bonappetit.com/recipe/simple-carbonara'
     },
     {
-        title: 'Chicken Stir Fry',
-        image: 'https://www.example.com/images/chicken_stir_fry.jpg',
-        ingredients: 'Chicken breast, bell peppers, broccoli, soy sauce, garlic, ginger',
-        link: 'https://www.example.com/recipes/chicken-stir-fry'
+        title: 'Chicken Breasts',
+        image: 'https://cafedelites.com/wp-content/uploads/2018/12/Creamy-Garlic-Chicken-Breasts-IMAGE-54.jpg',
+        ingredients: ["Chicken breast", "bell peppers", "broccoli", "soy sauce", "garlic", "ginger"],
+        link: 'https://www.recipetineats.com/oven-baked-chicken-breast/'
     },
-    // Add more predefined recipes here...
+   
 ];
 
 function searchRecipes() {
@@ -52,5 +56,3 @@ function displayRecipes(recipes) {
         recipeList.appendChild(recipeItem);
     });
 }
-
-//displayRecipes(recipes); // Display all recipes initially
