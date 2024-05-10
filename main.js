@@ -49,6 +49,14 @@ function searchRecipes() {
 
     const filteredRecipes = recipes.filter(recipe => recipe.title.toLowerCase().includes(searchTerm));
     displayRecipes(filteredRecipes);
+
+    const filteredByIng = recipes.filter(recipe => {
+        const ingredientsLower = recipe.ingredients.map(ingredient => ingredient.toLowerCase());
+        return ingredientsLower.includes(searchTerm);
+    });
+    displayRecipes(filteredByIng);
+
+
 }
 
 function displayRecipes(recipes) {
