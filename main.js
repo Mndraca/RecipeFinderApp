@@ -14,7 +14,7 @@ const recipes = [
     {
         title: 'Pasta Carbonara',
         image: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-square640-v2.jpg',
-        ingredients: ["Spaghetti", "eggs", "bacon", "Parmesan cheese", "black pepper"],
+        ingredients: ["Pasta", "eggs", "bacon", "cheese"],
         link: 'https://www.bonappetit.com/recipe/simple-carbonara'
     },
     {
@@ -32,7 +32,7 @@ const recipes = [
     {
         title: 'Gibanica',
         image: 'https://images.notquitenigella.com/images/gibanica-cheese-pie/__gibanica-cheese-pie-12.jpg',
-        ingredients: ["Cheese", "milk", "oil", "", "filo pastry", "eggs"],
+        ingredients: ["Cheese", "milk", "oil","filo pastry", "eggs"],
         link: 'https://www.notquitenigella.com/2023/05/31/gibanica-cheese-pie/'
     }
       
