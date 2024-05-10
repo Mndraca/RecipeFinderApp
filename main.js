@@ -23,13 +23,27 @@ const recipes = [
         ingredients: ["Chicken breast", "bell peppers", "broccoli", "soy sauce", "garlic", "ginger"],
         link: 'https://www.recipetineats.com/oven-baked-chicken-breast/'
     },
+    {
+        title: 'Sarma',
+        image: 'https://www.thespruceeats.com/thmb/JSb_k6aJLIk70ggoUHJyPFmzP7s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/serbian-stuffed-cabbage-recipe-sarma-1136569-hero-01-e874d6a9f7d74101a4a80f7465cbcfc7.jpg',
+        ingredients: ["Cabbage", "ground chuck", "rice", "onion", "ground pork", "smoked ribs"],
+        link: 'https://www.thespruceeats.com/serbian-stuffed-cabbage-recipe-sarma-1136569'
+    },
+    {
+        title: 'Gibanica',
+        image: 'https://images.notquitenigella.com/images/gibanica-cheese-pie/__gibanica-cheese-pie-12.jpg',
+        ingredients: ["Cheese", "milk", "oil", "", "filo pastry", "eggs"],
+        link: 'https://www.notquitenigella.com/2023/05/31/gibanica-cheese-pie/'
+    }
+      
    
 ];
+
 
 function searchRecipes() {
     const searchTerm = searchInput.value.trim().toLowerCase();
     if (searchTerm === '') {
-        displayRecipes(recipes);
+        alert("Please search your favourite food");
         return;
     }
 
@@ -40,7 +54,7 @@ function searchRecipes() {
 function displayRecipes(recipes) {
     recipeList.innerHTML = '';
     if (recipes.length === 0) {
-        recipeList.innerHTML = '<p>No recipes found</p>';
+        recipeList.innerHTML = 'No recipes found';
         return;
     }
 
