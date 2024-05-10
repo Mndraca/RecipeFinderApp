@@ -47,17 +47,24 @@ function searchRecipes() {
         return;
     }
 
-    const filteredRecipes = recipes.filter(recipe => recipe.title.toLowerCase().includes(searchTerm));
-    displayRecipes(filteredRecipes);
-
-    const filteredByIng = recipes.filter(recipe => {
+    const filteredRecipes = recipes.filter(recipe => {
+       
+        const titleLower = recipe.title.toLowerCase();
+        if (titleLower.includes(searchTerm)) {
+            return true;
+        }
+        
         const ingredientsLower = recipe.ingredients.map(ingredient => ingredient.toLowerCase());
         return ingredientsLower.includes(searchTerm);
     });
-    displayRecipes(filteredByIng);
+    displayRecipes(filteredRecipes);
 
+   
 
 }
+
+
+
 
 function displayRecipes(recipes) {
     recipeList.innerHTML = '';
